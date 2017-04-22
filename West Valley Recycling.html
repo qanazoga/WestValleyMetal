@@ -1,0 +1,362 @@
+<!DOCTYPE HTML>
+<html>
+
+<!--
+
+
+-->
+
+<head>
+
+
+<!-- This is the script that makes the header able to cycle through the different pictures -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+
+<!-- This is I think Ajax but I'm not so sure -->
+<script src="http://malsup.github.com/jquery.cycle2.js"></script>     
+	 
+<!-- These are two seperate scripts but they work together to build the google map API -->
+<script src="https://maps.googleapis.com/maps/api/js"></script>
+      
+	  <script>
+        function initialize() {
+          var mapCanvas = document.getElementById('mapAPI');
+          var mapOptions = {
+            center: new google.maps.LatLng(40.7214643, -112.0260994),
+            zoom: 12,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+          }
+          var map = new google.maps.Map(mapCanvas, mapOptions)
+          
+          var marker = new google.maps.Marker({
+            position: new google.maps.LatLng(40.7214643, -112.0260994),
+            map: map,
+            title: 'West Valley Metal Recycling'
+          });
+        }
+        google.maps.event.addDomListener(window, 'load', initialize);
+      </script>
+	
+	<!-- This links to the style sheet. We didn't do anything fancy so there was no need for different stylesheets for cross browser compatability -->
+	<link href="Design.css" type="text/css" rel="stylesheet" />
+
+	<!-- These are the description and keywords, which affect search engines -->
+	<meta name= "description" content= "West Valley" />
+	<meta name= "keywords" content="Metal" />
+
+	<!-- This is the location of the website, obviously we don't want canada to give us their metal -->
+	<meta property="locale" content="en_US" />
+	
+	<!-- This is the character set, in this case standard english letters -->
+	<meta charset="utf-8" />
+
+	<!-- This is for the icon that shows up in the corner of the tab -->
+	<link rel="shortcut icon" href="icon.png" />
+
+	<!-- The title that appears in the tab -->
+	<title>West Valley Metal</title>
+	
+</head>
+
+<body>
+
+	<!-- This is the toolBar that follows you when you scroll down -->
+	<div id="toolBar">
+		
+		<!-- unordered list containing the different parts of the page -->
+		<!-- I created two empty list elements that would sit on the edge and make the three with words sit equal distant from the edges and eachother -->
+		<ul>		
+		<li></li>
+		<li><a href="#metals">Metals</a></li>
+		<li><a href="#Location">Location</a></li>
+		<li><a href="#Contacting_us">Contacting us</a></li>
+		<li></li>
+		</ul>
+
+	</div>
+	
+	
+	<!-- This is the div for the entire page, it allows us to have a background -->
+	<div id="background">
+	
+		<!-- The main body is the centered white platform that everything else sits on, right now it takes up 70% of the screen -->
+		<div id="mainBody">
+		
+			<!-- This is the banner that sits right below the navigation bar, it cycles through multiple pictures --> 
+			<div id="banner">
+				
+				<!-- This style tag changes the properties of the script that cycles through the pictures -->
+				
+				<style>
+					.cycle-slideshow { width: 100%; height: auto; max-height: 205px; }
+					.cycle-slideshow img { width: 100%; height: auto; max-height: 205px;  }
+				</style>
+			
+				<!-- This is the actual div that contains the script runs in -->
+				<div class="cycle-slideshow"
+					data-cycle-fx="scrollHorz"
+		 			data-cycle-pause-on-hover="true"
+    				data-cycle-speed="200">
+				
+				<!-- The script cycles through these pictures, if you want another picture just add it here and it will go in order from top to bottom --> 
+				<img src="BannerImages/slide1.png" />
+				<img src="BannerImages/slide2.png" />
+				<img src="BannerImages/slide3.png" />
+				<img src="BannerImages/slide4.png" />
+				<img src="BannerImages/slide5.png" />
+				
+				</div>
+			</div>
+
+			<!-- This is all the stuff under the banner, it has a margin around it which is why this exists -->
+			<div id="maincontent">
+				
+				<!-- This is the group that holds the "welcome to the website" including a picture of the team --> 
+				<div id="welcome">
+				
+					<h1>
+					Welcome
+					</h1>
+					
+					<!-- This is the picture of the team that floats to the right of the paragraph -->
+					<div id="Team_Picture" >
+						<img src="Team.png" />
+					</div>		
+				
+					<!-- Class paragraph is for everything that sits under a header and needs special margins -->
+					<div id="Welcome_Content" class="paragraph">
+					
+						<p>
+						Here at West Valley Metal we're proud to be a locally owned and operated company. 
+						
+						We pay top dollar for your metals. 
+						We'll even come pickup the metal for free if you've got a large amount. 
+						It's easier than ever to sell any scrap you have laying around.
+						Come in today or give us a call, we'd be happy to answer all your questions.
+						
+						</p>
+						
+					</div>
+					
+				</div>	<!-- This is the end of the welcome subsection of the page -->		
+			
+				<!-- This is the metals subsection, it contains the pictures of the metals that the company accepts -->
+				<div id="metals">
+					
+					<h1>
+					Accepted Objects/Metals
+					</h1>
+				
+					<!-- The advancedmetalinfo class is for the boxes that have the layout of title, with a big picture underneath, and then text under that -->
+					<div class="advancedmetalinfo">
+					
+						<h3>Cans</h3>
+						<img src="metals/Cans.jpg" />
+						<p>
+						
+						</p>
+					</div>
+				
+					<div class="advancedmetalinfo">
+					
+						<h3>Cars</h3>
+						<img src="metals/cars.jpg" />
+						<p>
+						
+						</p>
+					</div>
+				
+					<div class="advancedmetalinfo">
+					
+						<h3>Wires and Cables</h3>
+						<img src="metals/wire.png" />
+						<p>
+						
+						</p>
+					</div>
+				
+					<!-- The metalinfo class is for the boxes that have the layout of title, with a picture underneath, and then text under that -->
+					<div class="metalinfo">
+					
+						<h3>Iron</h3>
+						<img src="metals/iron.png" />
+						<p>
+						<span class="metalcommon"> Common Items Include: </span>  <br />
+						Building materials		<br />
+						Cast Iron				<br />
+						
+						</p>
+					</div>
+				
+					<div class="metalinfo">
+						
+						<h3>Copper</h3>
+						<img src="metals/copper.jpg" />
+						<p>
+						<span class="metalcommon"> Common Items Include: </span>  <br />
+						Copper Plumping and Tubing <br />
+						Wires						<br />
+						
+						</p>
+					</div>				
+					
+					<div class="metalinfo">
+					
+						<h3>Aluminum</h3>
+						<img src="metals/aluminum.jpg" />
+						<p>
+						<span class="metalcommon"> Common Items Include: </span>  <br />
+						Lawn Furniture 			<br />
+						Gutters					<br />
+						Radiators				<br />
+						
+						</p>
+					</div>
+				
+					<div class="metalinfo">
+						
+						<h3>Steel</h3>
+						<img src="metals/steel.jpg" />
+						<p>
+						<span class="metalcommon"> Common Items Include: </span>  <br />
+						Old Motors				<br />
+						Metal Sinks				<br />
+						Rebar					<br />
+						</p>
+					</div>				
+					
+					<div class="metalinfo">
+					
+						<h3>Tin</h3>
+						<img src="metals/Tin.jpg" />
+						<p>
+						<span class="metalcommon"> Common Items Include: </span>  <br />
+						Cans <br />
+						Computer Cases <br />
+						
+						</p>
+					</div>
+				
+					<div class="metalinfo">
+						
+						<h3>Brass</h3>
+						<img src="metals/brass.jpg" />
+						<p>
+						<span class="metalcommon"> Common Items Include: </span>  <br />
+						Lamps
+						Lighing Fixtures		<br />
+						Old Sprinkler Heads		<br />
+						
+						</p>
+					</div>
+					
+				</div> <!-- This is the end of the metal subsection -->
+			
+				<!-- This is the location subsection, it contains the google map and the office hours -->
+				<div id="Location">
+
+					<!-- The header, pretty self explanitory -->
+					<div id="locationheader">
+					<h1>
+					Location
+					</h1>
+					</div>
+				
+					<!-- This is just the text that sits next to the google map -->
+					<div id="locationText">
+					
+						<p>
+						Our facility is located on 2220 South and 5650 West in West Valley City.
+						</p>
+
+						<!-- This is the hours information, it's wrapped in a div in case we wanted to do anything with it -->
+						<!-- We didn't need to but I left it here just in case -->
+						<div id="hours">
+							<p>
+							Our hours:
+							</p>
+							
+							<p>
+							
+							Monday-Friday: 00:00 to 00:00 <br />
+							Saturday: 00:00 to 00:00 <br />
+							Sunday: 00:00 to 00:00 <br />
+							
+							</p>
+						</div>
+					
+					</div>
+					
+					<!-- This is the google map, although it looks like an empty div tag it's not -->
+					<!-- This just gives the script it's place on the page -->
+					<div id="mapAPI">
+					
+					</div>
+					
+				</div> <!-- This is the end of the Location subsection -->
+				
+				<!-- This is the subsection that contains contact information. Nothing becides a paragraph and a box with said information -->
+				<div id="Contacting_us">
+				
+					<!-- This is for all the writing that isn't email address and phone number plus these don't have a border-->
+					<div id="contactwriting">
+						
+						<h1>
+						Contacting Us
+						</h1>
+
+						<div class="paragraph">
+						
+							<p>
+							Questions about your scrap?
+							Wondering how much you can earn?
+							If you have any questions feel free to send us an email or give our facility a call.
+							We'd be happy to answer all your questions.
+							</p>
+						
+						</div>
+						
+					</div>
+					
+					<!-- This is the box with the contact information, it has a border and floats to the right -->
+					<div id="contactbox">
+					
+					<!-- I used header 2 as the header for the information types since there was nowhere else on the page that used h2 -->
+					<!-- Yes I know it's sorta sloppy and I should have used a class -->
+					<h2>
+					Email Address
+					</h2>
+					
+					<p>
+					example@gmail.com
+					</p>
+					
+					<h2>
+					Phone number:
+					</h2>
+					
+					<p>
+					801-662-0165
+					</p>
+					
+					</div>
+					
+				</div>	<!-- This is the end of the contacting us subsection -->
+				
+				<!-- This is the thing that rests on the bottom of the page, it's mostly empty but more can be added later -->
+				<div id="footer">
+			
+				<p> West Valley Recycling LLC </p>
+				
+				</div> <!-- This is the end of the footer subsection -->
+
+			</div> <!-- This is the end of the "maincontent" section -->
+				
+		</div> <!-- This is the end of the "mainbody" section -->
+		
+		
+	</div> <!-- This is the end of the "background" section -->
+	
+</body>
+
+</html>

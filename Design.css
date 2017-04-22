@@ -1,0 +1,299 @@
+body{
+margin: 0px;
+background: url(bg.jpg) no-repeat fixed center top;
+color: #676F76;
+margin-bottom: 30px;
+font-family: Verdana, sans-serif;
+}
+
+#toolBar h3{
+
+margin: 0px;
+float: left;
+}
+
+a:link {
+color: #FFFFFF; 
+text-decoration: none;
+}
+
+a:visited {
+color: #FFFFFF;
+}
+
+h1{
+
+text-shadow: 1px 1px 0px black;
+margin: 10px;
+margin-bottom: 15px;
+
+}
+
+p{
+
+line-height: 150%;
+font-family: Titillium Web,Arial,Tahoma,sans-serif;
+
+}
+
+#mainBody{
+
+z-index: -1;
+position: absolute;
+top: 65px;
+background-color: white;
+width: 70%;
+right: 15%;
+left: 15%;
+}
+
+#maincontent{
+margin: 15px;
+}
+
+.paragraph{
+
+padding-left: 15px;
+padding-right: 30px;
+
+}
+
+#toolBar{
+
+box-shadow: 0px 5px 2px #1E1F26;
+border: black solid 1px;
+background: url(index.png) repeat fixed center top;
+width: 70%;
+margin: 0px 15% 0px;
+text-align: center;
+position:fixed;
+
+}
+
+#toolBar ul{
+display: flex;
+align-items: stretch;
+justify-content: space-between;
+padding: 0px;
+}
+
+#toolBar li{
+flex: 0 1 auto;
+display: block;
+list-style: none;
+z-index: 10;
+}
+
+
+#banner{
+
+border: black solid 2px;
+width: 100%;
+left: 0px;
+
+}
+
+#welcome{
+
+float: left;
+display: inline;
+margin-bottom: 5px;
+
+}
+
+#Welcome_Content{
+
+float: left;
+display: inline-block;
+width: 35%;
+padding-right: 0px;
+
+}
+
+#welcome h1{
+
+float: left;
+
+}
+
+#Team_Picture{
+
+float: right;
+display: inline-block;
+width: 59%;
+top: 0px;
+
+}
+
+#Team_Picture img{
+
+width: 100%;
+
+}
+
+#morecontent{
+
+float: left;
+display: inline-block;
+width: 100%;
+
+}
+
+#metals{
+
+float: left;
+display: block;
+outline: medium none;
+position: relative;
+
+}
+
+.metalinfo img{
+
+height: 130px;
+width: 160px;
+background-color: blue;
+
+}
+
+.metalinfo{
+
+overflow: hidden;
+margin-left: auto;
+margin-right: auto;
+float: left;
+display: inline;
+width: 33%;
+min-width: 180px;
+vertical-align: baseline;
+margin-bottom: 10px;
+text-align: center;
+}
+
+.advancedmetalinfo  img{
+
+max-height: 204px;
+width: 100%;
+
+}
+
+.advancedmetalinfo {
+
+overflow: hidden;
+margin-left: auto;
+margin-right: auto;
+float: left;
+display: inline;
+width: 33%;
+min-width: 180px;
+vertical-align: baseline;
+margin-bottom: 10px;
+text-align: center;
+
+}
+
+.metalinfo h3{
+
+margin-top: 0px;
+
+}
+
+.metalcommon{
+
+font-weight: bold;
+
+}
+
+#locationheader{
+
+
+}
+
+#Location{
+
+float: left;
+vertical-align: bottom;
+outline: medium none;
+position: relative;
+width: 100%;
+display: inline-block;
+overflow: hidden;
+
+}
+
+#locationText{
+
+display: inline-block;
+margin-left: 15px;
+margin-right: auto;
+margin-top: 0px;
+margin-bottom: 30px;
+width: 50%;
+height: 300px;
+overflow: hidden;
+
+}
+
+#mapAPI{
+
+display: inline-block;
+border: black solid 2px;
+margin-left: auto;
+margin-right: 15px;
+margin-top: 0px;
+margin-bottom: 30px;
+float: right;
+width:40%;
+height: 300px;
+min-width: 100px;
+min-height: 100px;
+background-color: gray;
+
+}
+
+#Contacting_us{
+
+display: inline-block;
+float: right;
+margin-bottom: 10px;
+
+}
+
+#contactwriting{
+
+display: inline-block;
+overflow: hidden;
+width: 50%;
+
+}
+
+
+#contactbox h2, p{
+
+margin: 5px;
+
+}
+
+
+#contactbox{
+display: inline-block;
+float: right;
+padding: 5px;
+margin: 15px;
+margin-right: 30px;
+border: black solid 1px;
+}
+
+#footer{
+
+width: 100%;
+border-top: black solid 2px;
+float: left;
+display: inline-block;
+
+}
+
+#footer p{
+float: right;
+margin-right: 30px;
+}
